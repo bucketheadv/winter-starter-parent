@@ -20,10 +20,13 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <spring-boot.version>3.0.0-M1</spring-boot.version>
-        <winter.version>master-springboot3-SNAPSHOT</winter.version>
+        <winter.version>v0.1.0</winter.version>
         <jedis.version>4.0.1</jedis.version>
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
         <rocketmq.version>2.2.1</rocketmq.version>
+        <hutool.version>5.7.20</hutool.version>
+        <guava.version>31.0.1-jre</guava.version>
+        <json-path.version>2.7.0</json-path.version>
     </properties>
 
     <dependencyManagement>
@@ -76,12 +79,17 @@
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
-                <version>5.7.20</version>
+                <version>${hutool.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>31.0.1-jre</version>
+                <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jayway.jsonpath</groupId>
+                <artifactId>json-path</artifactId>
+                <version>${json-path.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
