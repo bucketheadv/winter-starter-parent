@@ -4,6 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.0-M1</version>
+    </parent>
+
     <groupId>org.winterframework</groupId>
     <artifactId>winter-starter-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -14,6 +20,8 @@
         <maven.compiler.target>17</maven.compiler.target>
         <spring-boot.version>3.0.0-M1</spring-boot.version>
         <winter.version>master-springboot3-SNAPSHOT</winter.version>
+        <jedis.version>4.0.1</jedis.version>
+        <mybatis-plus.version>3.5.1</mybatis-plus.version>
     </properties>
 
     <dependencyManagement>
@@ -27,6 +35,21 @@
                 <groupId>com.github.bucketheadv</groupId>
                 <artifactId>winterframework</artifactId>
                 <version>${winter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
