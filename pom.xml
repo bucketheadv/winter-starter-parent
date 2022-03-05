@@ -20,7 +20,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <spring-boot.version>3.0.0-M1</spring-boot.version>
-        <winter.version>0.2.0</winter.version>
+        <winter.version>0.6.0</winter.version>
         <jedis.version>4.0.1</jedis.version>
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
         <rocketmq.version>2.2.1</rocketmq.version>
@@ -39,6 +39,36 @@
             <dependency>
                 <groupId>com.github.bucketheadv</groupId>
                 <artifactId>winterframework</artifactId>
+                <version>${winter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bucketheadv.winterframework</groupId>
+                <artifactId>winter-core</artifactId>
+                <version>${winter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bucketheadv.winterframework</groupId>
+                <artifactId>winter-data-redis</artifactId>
+                <version>${winter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bucketheadv.winterframework</groupId>
+                <artifactId>winter-elasticsearch</artifactId>
+                <version>${winter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bucketheadv.winterframework</groupId>
+                <artifactId>winter-kafka</artifactId>
+                <version>${winter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bucketheadv.winterframework</groupId>
+                <artifactId>winter-mongodb</artifactId>
+                <version>${winter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bucketheadv.winterframework</groupId>
+                <artifactId>winter-rocketmq</artifactId>
                 <version>${winter.version}</version>
             </dependency>
             <dependency>
