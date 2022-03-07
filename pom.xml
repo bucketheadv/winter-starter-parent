@@ -20,13 +20,17 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <spring-boot.version>3.0.0-M1</spring-boot.version>
-        <winter.version>0.7.0</winter.version>
+        <spring-cloud.version>3.1.1</spring-cloud.version>
+        <winter.version>0.8.0</winter.version>
         <jedis.version>4.0.1</jedis.version>
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
         <rocketmq.version>2.2.1</rocketmq.version>
         <hutool.version>5.7.20</hutool.version>
         <guava.version>31.0.1-jre</guava.version>
         <json-path.version>2.7.0</json-path.version>
+        <apollo.version>1.9.2</apollo.version>
+        <guice.version>5.0.1</guice.version>
+        <xxl-job.version>2.3.0</xxl-job.version>
     </properties>
 
     <dependencyManagement>
@@ -120,6 +124,26 @@
                 <groupId>com.jayway.jsonpath</groupId>
                 <artifactId>json-path</artifactId>
                 <version>${json-path.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>${apollo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.inject</groupId>
+                <artifactId>guice</artifactId>
+                <version>${guice.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl-job.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-context</artifactId>
+                <version>${spring-cloud.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
