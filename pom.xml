@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.0-M4</version>
+        <version>3.0.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -20,19 +20,21 @@
         <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <spring-boot.version>3.0.0-M1</spring-boot.version>
+        <spring-boot.version>3.0.0</spring-boot.version>
         <spring-cloud.version>3.1.1</spring-cloud.version>
-        <winter.version>0.8.0</winter.version>
-        <jedis.version>4.0.1</jedis.version>
-        <mybatis-plus.version>3.5.1</mybatis-plus.version>
-        <rocketmq.version>2.2.1</rocketmq.version>
+        <winter.version>0.0.1-SNAPSHOT</winter.version>
+        <jedis.version>4.3.1</jedis.version>
+        <rocketmq.version>2.2.2</rocketmq.version>
         <hutool.version>5.7.20</hutool.version>
         <guava.version>31.0.1-jre</guava.version>
         <json-path.version>2.7.0</json-path.version>
         <apollo.version>1.9.2</apollo.version>
         <guice.version>5.0.1</guice.version>
-        <xxl-job.version>2.3.0</xxl-job.version>
         <jackson.version>2.13.4</jackson.version>
+        <xxl-job.version>2.3.1</xxl-job.version>
+        <jackson.version>2.13.4</jackson.version>
+        <snakeyaml.version>1.33</snakeyaml.version>
+        <fastjson.version>2.0.14</fastjson.version>
     </properties>
 
     <dependencyManagement>
@@ -78,14 +80,20 @@
                 <version>${winter.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis-plus.version}</version>
+                <groupId>com.github.bucketheadv.winterframework</groupId>
+                <artifactId>winter-jwt</artifactId>
+                <version>${winter.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-spring-boot-starter</artifactId>
                 <version>${rocketmq.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-collections</groupId>
+                        <artifactId>commons-collections</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.springframework.kafka</groupId>
@@ -101,11 +109,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
                 <version>${spring-boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-                <version>${mybatis-plus.version}</version>
             </dependency>
             <dependency>
                 <groupId>redis.clients</groupId>
@@ -151,6 +154,21 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>${snakeyaml.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>4.4</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
